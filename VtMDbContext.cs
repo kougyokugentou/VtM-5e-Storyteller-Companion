@@ -23,5 +23,10 @@ namespace VtM_5e_Storyteller_Companion
                 optionsBuilder.UseSqlServer(connectionString);
             }
         }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfiguration(new ClanConfiguration());
+        }
     }
 }
