@@ -16,37 +16,11 @@ namespace VtM_5e_Storyteller_Companion
 
         private void FirstTimeLoad()
         {
+            //Ensure the database is created and seeded with data.
             using (var db = new VtMDbContext())
             {
                 db.Database.EnsureCreated();
-
-                try
-                {
-                    var query = from clan in db.Clans select clan;
-                    Console.WriteLine("All clans in the database:");
-
-                    foreach (var item in query)
-                    {
-                        Console.WriteLine(item.Name);
-                    }
-
-                    Console.WriteLine("Press any key to exit...");
-                    Console.ReadKey();
-                }
-                catch //no clans means not first run
-                {
-                    var clan = new Clan
-                    {
-                        Name = "Brujah",
-                        Description = "Rabble-rousers",
-                        Bane = "Rage"
-                    };
-
-                    db.Clans.Add(clan);
-                    db.SaveChanges();
-
-                }
-            } //end using
+            }
         }
     }
 }
