@@ -14,7 +14,8 @@ namespace VtM_5e_Storyteller_Companion.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Required]
         public int DisciplineID { get; set; }
-        public string Name { get; set; }
+        public DisciplineLookup DisciplineLookup { get; set; }
+
         public int Value { get; set; }
 
         public Character Character { get; set; }
