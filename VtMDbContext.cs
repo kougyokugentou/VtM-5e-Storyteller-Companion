@@ -9,6 +9,7 @@ namespace VtM_5e_Storyteller_Companion
         public DbSet<Models.Attribute> Attributes { get; set; }
         public DbSet<Character> Characters { get; set; }
         public DbSet<Clan> Clans { get; set; }
+        public DbSet<DisciplineLookup> DisciplineLookups { get; set; }
         public DbSet<Discipline> Disciplines { get; set; }
         public DbSet<Predator> Predators { get; set; }
         public DbSet<Skill> Skills { get; set; }
@@ -27,6 +28,7 @@ namespace VtM_5e_Storyteller_Companion
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new ClanConfiguration());
+            modelBuilder.ApplyConfiguration(new DisciplineLookupConfiguration());
         }
     }
 }

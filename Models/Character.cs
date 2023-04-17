@@ -1,6 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using VtM_5e_Storyteller_Companion.Models;
 
 namespace VtM_5e_Storyteller_Companion.Models
 {
