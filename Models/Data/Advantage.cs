@@ -4,19 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace VtM_5e_Storyteller_Companion.Models
+namespace VtM_5e_Storyteller_Companion.Models.Data
 {
     public class Advantage
     {
-        public int AdvantageId { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
-        public enum Type
-        {
-            Merit = 0,
-            Flaw = 1
-        }
         public int Points { get; set; }
-
-        public Character Character { get; set; }
     }
 }

@@ -1,4 +1,4 @@
-using VtM_5e_Storyteller_Companion.Models;
+using VtM_5e_Storyteller_Companion.Models.Data;
 
 namespace VtM_5e_Storyteller_Companion
 {
@@ -16,11 +16,9 @@ namespace VtM_5e_Storyteller_Companion
 
         private void FirstTimeLoad()
         {
-            //Ensure the database is created and seeded with data.
-            using (var db = new VtMDbContext())
-            {
-                db.Database.EnsureCreated();
-            }
+            SeedDB seedDb = new SeedDB();
+
+            seedDb.ValidateDB();
         }
     }
 }

@@ -8,6 +8,9 @@ namespace VtM_5e_Storyteller_Companion.Models
 {
     public class ConvictionTouchstone
     {
-        public int ConvTouchID { get; set; }
+        public int Id { get; set; }
+        int CharacterId { get; set; }
+        string Conviction { get; set; }
+        string Touchstone { get; set; }
     }
 }

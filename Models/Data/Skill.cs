@@ -6,17 +6,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace VtM_5e_Storyteller_Companion.Models
+namespace VtM_5e_Storyteller_Companion.Models.Data
 {
     public class Skill
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        [Required] 
-        public int SkillId { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
-        public int Value { get; set; }
-
-        public Character Character { get; set; }
     }
 }

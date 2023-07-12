@@ -7,10 +7,10 @@ using VtM_5e_Storyteller_Companion.Models.Data;
 
 namespace VtM_5e_Storyteller_Companion.Models
 {
-    public class ClanDiscipline
+    public class CharacterAdvantage
     {
-        public int Id { get; set; }
-        public int ClanId { get; set; }
-        public int DisciplineId { get; set; }
+        int Id { get; set; }
+        int CharacterId { get; set; }
+        int AdvantageId { get; set; }
     }
 }
